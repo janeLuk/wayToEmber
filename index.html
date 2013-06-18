@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Way To Ember</title>
+    <script data-main="js/init.js" src="lib/require.js"></script>
+</head>
+<body>
+<!--- ... additional lines truncated for brevity ... -->
+<ul id="form-list">
+  {{#each form}}
+    <li>
+      <input type="checkbox" class="toggle">
+      <label>{{type}}</label><button class="destroy">{{id}}</button>
+    </li>
+  {{/each}}
+</ul>
+<!--- ... additional lines truncated for brevity ... -->
+
+</body>
+</html>
