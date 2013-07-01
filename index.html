@@ -8,6 +8,8 @@
 <script type='text/x-handlebars' data-template-name="form">
 {{#each form in controller}}
     {{form.id}}<br>
+    
+    {{view App.ViewsContainer contentBinding="this"}}<br/>
 {{/each}}
 </script>
 
