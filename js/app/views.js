@@ -6,5 +6,16 @@ define(['ember', 'emberData'], function(){
 //        classNames: ['form-list']
 //    });
 
+    App.ViewsContainer = Ember.ContainerView.extend({
+        classNames: ['Container'],
+    
+        willInsertElement: function(){
+            var model = this.get("content");
+            for(i in model){
+                console.log(i + " = " + model[i])
+            }
+        }
+    });
+
     return Views
 })
