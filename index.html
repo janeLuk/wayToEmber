@@ -5,16 +5,11 @@
     <script data-main="js/init.js" src="lib/require.js"></script>
 </head>
 <body>
-<!--- ... additional lines truncated for brevity ... -->
-<ul id="form-list">
-  {{#each form}}
-    <li>
-      <input type="checkbox" class="toggle">
-      <label>{{type}}</label><button class="destroy">{{id}}</button>
-    </li>
-  {{/each}}
-</ul>
-<!--- ... additional lines truncated for brevity ... -->
+<script type='text/x-handlebars' data-template-name="form">
+{{#each form in controller}}
+    {{form.id}}<br>
+{{/each}}
+</script>
 
 </body>
 </html>

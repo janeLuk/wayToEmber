@@ -14,6 +14,12 @@ require.config({
         'emberData':{
             deps:[ 'ember'],
             exports:'DS'
+        },
+        'jquery':{
+            exports: '$'
+        },
+        'handlebars':{
+            exports: 'Handlebars'
         }
     }
 });

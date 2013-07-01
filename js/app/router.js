@@ -1,42 +1,22 @@
 define(
-    ['./models', './controllers', './views']
+    ['./models', './controllers', './views', 'ember', 'emberData']
     , function (Model, Controller, View){
 
     var App = Ember.Application.create({
         LOG_TRANSITIONS: true
     })
 
-
     App.Router.map(function () {
-        this.resource('main', { path: '/' });
+        this.resource('form');
     });
 
-    App.MainRoute = Ember.Route.extend({
+    App.Store = Model.Store;
+    App.Form = Model.Form;
+
+
+    App.IndexRoute = Ember.Route.extend({
         model: function () {
-            console.log(Model)
-            return Model.Form.find();
+            return App.Form.find();
         }
     });
-
-    //Add sample data
-    Model.Form.FIXTURES = [
-        {
-            id: 1
-            , isRequired: true
-            , placeholder: 'add some'
-            , type: 'text'
-        },
-        {
-            id: 2
-            , isRequired: true
-            , placeholder: 'add some 2'
-            , type: 'text'
-        },
-        {
-            id: 3
-            , isRequired: true
-            , placeholder: 'add some 3'
-            , type: 'text'
-        }
-    ];
 })
